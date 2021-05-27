@@ -1,0 +1,49 @@
+<!-- 8. Write the HTML for the following image shown below. Do not consider outermost border: -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Table</title>
+    <style>
+        table,
+        tr,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        #top-right,
+        #bot-left {
+            background-color: #808080;
+        }
+
+        #top-left,
+        #bot-right {
+            background-color: #C0C0C0;
+        }
+
+        #bot-left,
+        #bot-right {
+            padding-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td id="top-left">topleft</td>
+            <td id="top-right">topright</td>
+        </tr>
+        <tr>
+            <td id="bot-left">botleft</td>
+            <td id="bot-right">botright</td>
+        </tr>
+    </table>
+</body>
+
+</html>

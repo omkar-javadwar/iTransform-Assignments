@@ -1,0 +1,19 @@
+/* b8.css */
+p{
+    background-color: #E0FFFF;
+    outline-color: black;
+}
+
+p.solid1 {
+    outline-style: solid;
+}
+
+p.solid2 {
+    outline-style: solid;
+    outline-width: 3px;
+}
+
+p.solid3 {
+    outline-style: solid;
+    outline-width: 5px;
+}

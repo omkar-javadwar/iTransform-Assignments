@@ -1,0 +1,6 @@
+/* b7.css */
+p{
+    outline-style: dotted;
+    outline-color: greenyellow;
+    border: 1px solid red;
+}

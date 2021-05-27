@@ -1,0 +1,12 @@
+/* b2.css */
+body {
+    background-color: #E0FFFF;
+}
+
+h2 {
+    text-decoration: line-through;
+}
+
+h3{
+    text-decoration: underline;
+}

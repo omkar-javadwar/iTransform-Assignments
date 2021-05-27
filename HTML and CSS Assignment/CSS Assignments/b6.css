@@ -1,0 +1,13 @@
+/* b6.css */
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+table, th, td{
+    border: 1px solid #008000;
+}
+
+th{
+    background-color: #008000;
+    color: white;
+}
