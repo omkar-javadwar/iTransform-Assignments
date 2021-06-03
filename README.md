@@ -7,6 +7,8 @@ iTransform Assignments Solutions.
  Main Branch
    ├── GitHub Assignment
    ├── MongoDB Assignment
-   └── HTML and CSS Assignment
+   ├── HTML and CSS Assignment
+   ├── JavaScript Assignment
+   └── ES and TypeScript Assignments
 ```   
 
