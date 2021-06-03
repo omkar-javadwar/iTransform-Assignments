@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercises: JavaScript Assignments</title>
+</head>
+
+<body>
+    <!-- 6. Create a string that contains what looks like an object with firstName and lastName properties. Use "eval" to turn it into a real object, and test it the same way you did with the previous object that you created directly. -->
+    <script>
+        class Person {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.fullName = function () {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+        }
+        var p = new Person("abc", "xyz");
+
+        console.log(eval(p.fullName() === "abc xyz"));
+    </script>
+</body>
+
+</html>

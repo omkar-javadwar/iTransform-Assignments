@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercises: JavaScript Assignments</title>
+</head>
+
+<body>
+    <!-- 2. Add a getArea method. Use the prototype property. -->
+    <script>
+        class Rectangle {
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            }
+            getArea() {
+                return this.height * this.width;
+            }
+        }
+        let ob = new Rectangle(10, 20);
+        console.log("Width: " + ob.width + ", Height:" + ob.height);
+        console.log("Area: " + ob.getArea());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercises: JavaScript Assignments</title>
+</head>
+
+<body>
+
+    <!-- 2. Modify the above program to create 2 objects, amitabh and abhishek, here abhishek has some common properties from amitabh, try to use it such common properties from amitabh instead of creating it in abhishek.
+
+    CODE::function person(fname, Iname,age, skills,dateofbirth, address,married, profession) {
+        this.fname=fname;
+        this.Iname=Iname;
+        this.age-age;
+        this skills skills;
+        this.dateofbirth=dateofbirth;
+        this.address address;
+        this married married;
+        this.profession profession;
+    }
+
+    amithab=new person("amithab","bachan",22,["c"],"24/10/1996", (city:"hyderabad",pincode:"521185"), "false","sr analyst")
+    abhisheik=new person("abhisheik",21,"HTML","08/06/1997","false","jr analyst")
+    
+    var abhisheik Object.create(amithab);
+    
+    print=function() {
+    console.log(amithab);
+    console.log(abhisheik.Iname); console.log(abhisheik.address);
+    }(); -->
+
+    <script>
+        function person(fname, lname, age, skills, dateofbirth, address, married, profession) {
+            this.fname = fname;
+            this.lname = lname;
+            this.age = age;
+            this.skills = skills;
+            this.dateofbirth = dateofbirth;
+            this.address = address;
+            this.married = married;
+            this.profession = profession;
+        }
+
+        amitabh = new person("amitabh", "bachan", 22, ["c"], "24/10/1996", { city: "hyderabad", pincode: "521185" }, "false", "sr analyst");
+        abhisheik = new person("abhisheik", 21, "HTML", "08/06/1997", "false", "jr analyst");
+        // creating object
+        var abhisheik = Object.create(amitabh);
+
+        print = function () {
+            console.log(amitabh);
+            console.log(abhisheik.lname);
+            console.log(abhisheik.address);
+        }();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercises: JavaScript Assignments</title>
+</head>
+
+<body>
+    <!-- 5. Try reading the middleName property from your variable above. Try assigning to the middle Name property. Try reading the property again after you assign to it. Is this behavior a good thing or a bad thing? -->
+    <script>
+        var p = {
+            firstName: "abc",
+            lastName: "xyz"
+        };
+
+        class Person {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+        }
+
+        //console.log(p.firstName + " " + p.lastName);
+        console.log(p.middleName);
+        p.middleName = "pqr";
+        console.log(p.middleName);
+    </script>
+</body>
+
+</html>

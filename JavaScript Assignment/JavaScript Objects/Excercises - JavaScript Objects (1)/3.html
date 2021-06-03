@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercises: JavaScript Assignments</title>
+</head>
+
+<body>
+    <!-- 3. Assuming that the Rectangle constructor takes a width and a height, why does the following output 20 instead of 200? (Hint: if you see an answer that seems too obvious to be what I am looking for, it probably is the answer I am looking for.)
+    Rectangle r = new Rectangle (4, 5); r.hieght = 50;
+    r.getArea (): 20 // Not 200 -->
+    <script>
+        class Rectangle {
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+                this.getArea = function () {
+                    return this.height * this.width;
+                }
+            }
+        }
+        let r = new Rectangle(4, 5);
+        r.hieght = 50;
+        console.log("Area: " + r.getArea());
+    </script>
+</body>
+
+</html>

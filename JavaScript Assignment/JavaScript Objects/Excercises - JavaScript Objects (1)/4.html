@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercises: JavaScript Assignments</title>
+</head>
+
+<body>
+    <!-- 4. Make a variable whose value is an object with firstName and lastName properties, but don't define a Person class first. Try looking up the first and last names. Try changing the last name. It seems very odd to Java programmers to make an object without first defining a class, but JavaScript pro grammers do this sort of thing all the time. -->
+    <script>
+        var p = {
+            firstName: "Omkar",
+            lastName: "Javadwar"
+        };
+
+        class Person {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+        }
+
+        console.log(p.firstName + " " + p.lastName);
+    </script>
+</body>
+
+</html>
