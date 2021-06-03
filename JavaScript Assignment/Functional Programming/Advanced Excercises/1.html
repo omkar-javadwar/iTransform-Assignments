@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functional Programming - Advanced Excercises</title>
+</head>
+
+<body>
+
+    <!-- 1. Make a "pure" recursive version of find. That is, don't use any explicit loops (e.g. for loops or the forEach method), and don't use any local variables (e.g., var x...) inside the functions. Hint: remember the slice method of arrays.
+
+    function isEven (num) { return (num%2 == 0); }
+    isEven (3) -> false
+    isEven (4) -> true
+    find ([1, 3, 5, 14, 21, isEven); -> 4 -->
+
+    <script type="text/javascript">
+        function find(arr, f) {
+            if (arr.length > 0) {
+                if (f(arr[0])) {
+                    return arr[0]
+                }
+                return find(arr.slice(1), f);
+            }
+        }
+
+        function isEven(num) {
+            return (num % 2 == 0);
+        }
+
+        document.write(isEven(3) + "<br>");
+        document.write(isEven(4) + "<br>");
+        document.write(find([1, 3, 5, 4, 2], isEven));
+    </script>
+</body>
+
+</html>

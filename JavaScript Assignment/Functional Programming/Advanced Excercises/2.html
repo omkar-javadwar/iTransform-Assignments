@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functional Programming - Advanced Excercises</title>
+</head>
+
+<body>
+
+    <!-- 2. Make a "pure" recursive version of map. Hint: remember the slice and concat methods of arrays.
+
+    map ([1, 2, 3, 4, 5], square); -> [1, 4, 9, 16, 25]
+    map ([1, 4, 9, 16, 25], Math.sqrt); -> [1, 2, 3, 4, 5] -->
+
+    <script type="text/javascript">
+        var newArr = [];
+        function map(arr, f) {
+            if (arr.length > 0) {
+                newArr.push(f(arr[0]));
+                map(arr.slice(1), f);
+            }
+        }
+
+        function square(x) {
+            return x * x;
+        }
+
+        map([1, 2, 3, 4, 5], square);
+        map([1, 4, 9, 16, 25], Math.sqrt);
+
+        document.write(newArr);
+
+    </script>
+</body>
+
+</html>

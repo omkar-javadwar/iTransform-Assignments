@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functional Programming - Basic Excercises</title>
+</head>
+
+<body>
+
+    <!-- 3. Make a function called "find" that takes an array and a test function, and returns the first element of the array that "passes" (returns non-false for) the test. Don't use map, filter, or reduce.
+
+    function isEven (num) { return (num82 == 0); }
+    isEven (3) -> false
+    isEven (4) -> true
+    find ([1, 3, 5, 4, 2], isEven); -> 4 -->
+
+    <script type="text/javascript">
+        function find(arr, f) {
+            for (var i = 0; i < arr.length; i++) {
+                if (f(arr[i])) {
+                    return arr[i];
+                }
+            }
+        }
+
+        function isEven(num) {
+            return (num % 2 == 0);
+        }
+
+        document.write(isEven(3) + "<br>");
+        document.write(isEven(4) + "<br>");
+        document.write(find([1, 3, 5, 4, 2], isEven));
+    </script>
+</body>
+
+</html>

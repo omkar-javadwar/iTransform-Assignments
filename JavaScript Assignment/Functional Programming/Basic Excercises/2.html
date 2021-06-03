@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functional Programming - Basic Excercises</title>
+</head>
+
+<body>
+
+    <!-- 2. Make a function called compose that takes two functions fl and f2 and returns a new function that, when called on a value, will return fl(f2(value)). Assume that fl and f2 each take exactly one argu ment.
+    var f1 = compose (square, double);
+    f1 (5); -> 100 
+    f1 (10); -> 400 
+
+    var f2 = compose (double, square);
+    f2 (5); -> 50 
+    f2 (10); -> 200 -->
+
+    <script type="text/javascript">
+        function compose(f1, f2) {
+            return function (x) {
+                return f1(f2(x));
+            };
+        }
+
+        function square(x) {
+            return x * x;
+        }
+
+        function double(x) {
+            return x * 2;
+        }
+
+        var f1 = compose(square, double);
+        var f2 = compose(double, square);
+
+        document.write(f1(5) + "<br>");
+        document.write(f1(10) + "<br>");
+        document.write(f2(5) + "<br>");
+        document.write(f2(10) + "<br>");
+
+    </script>
+</body>
+
+</html>

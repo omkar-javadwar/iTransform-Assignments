@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functional Programming - Basic Excercises</title>
+</head>
+
+<body>
+    <!-- 1. Make a function called composed Value that takes two functions fl and f2 and a value and returns fl(f2(value)), i.e., the first function called on the result of the second function called on the value.
+    function square (x) { return (x*x); }
+    function double (x) { return (x*2); } 
+    composedValue (square, double, 5); -> 100 // I.e., square (double, (5)) -->
+
+    <script type="text/javascript">
+        function composedValue(f1, f2, value) {
+            return f1(f2(value));
+        }
+        function square(x) {
+            return x * x;
+        }
+        function double(x) {
+            return x * 2;
+        }
+        document.write(composedValue(square, double, 5));
+    </script>
+</body>
+
+</html>
