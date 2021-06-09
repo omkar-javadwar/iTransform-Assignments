@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercises: Basic</title>
+</head>
+
+<body>
+    <!-- Write a function that returns the number of times you have to roll a die to get a 6. 
+        (Minor hint compare Math.random() to 5/6). -->
+    <script type="text/javascript">
+        // Initializing array with dice numbers
+        var sides = ["One", "Two", "Three", "Four", "Five", "Six"];
+
+        // counter variable
+        var count = 1;
+
+        // generating random number
+        var roll = sides[Math.floor(Math.random() * 6)];
+
+        while (roll != "Six") {
+            count += 1;
+            console.log("Die:- " + roll);
+            roll = sides[Math.floor(Math.random() * 6)];
+        }
+        console.log("Die:-" + roll);
+        console.log(count + " times you have to roll a die to get a six");
+    </script>
+</body>
+
+</html>
