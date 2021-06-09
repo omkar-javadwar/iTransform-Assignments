@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercises: Basic JS</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*Write a function that, given an array of strings,
+        will compute the sum of the lengths of the words that do not contain a "q".
+        Do not use a loop or the forEach method, only array methods (filter, map, reduce)
+        and string methods/properties (indexOf, length)*/
+
+        var test1 = ["stop", "quit", "exit"];
+        var test2 = ["queen", "quit"];
+
+        function removeQelements(arr) {
+            //const a = arr.filter((item) => item.includes("q"));
+            for (var i = 0; i < arr.legth; i++) {
+                if (arr[i].includes('q')) {
+                    arr.splice(i, 1);
+                    return arr;
+                }
+            }
+        }
+
+        function lengthOfNonQWords(arr) {
+            return removeQelements(arr);
+        }
+
+        document.write(lengthOfNonQWords(test1));
+        document.write(lengthOfNonQWords(test2));
+
+    </script>
+</body>
+
+</html>

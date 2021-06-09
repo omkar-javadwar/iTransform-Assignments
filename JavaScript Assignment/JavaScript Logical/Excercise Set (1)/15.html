@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write a function that computes the running total of a list. -->
+    <script type="text/javascript">
+        var inputArray = [];
+        var size = window.prompt("Enter size of a list");
+
+        for (var i = 0; i < size; i++) {
+
+            inputArray[i] = prompt('Enter Element ' + (i + 1));
+        }
+
+        function totalOfArray(arr) {
+            var total = 0;
+            for (var i = 0; i < arr.length; i++) {
+                total += parseInt(arr[i]);
+            }
+            return total;
+        }
+
+        document.write("Input list: " + inputArray + "<br>" + "Total of list: " + totalOfArray(inputArray));
+    </script>
+</body>
+
+</html>

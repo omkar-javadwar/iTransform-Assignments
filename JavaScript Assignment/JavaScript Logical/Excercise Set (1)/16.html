@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write a function that tests whether a string is a palindrome or not. -->
+    <script type="text/javascript">
+        var inputString = window.prompt("Enter a string:");
+
+        function isPalindrome(str) {
+            for (let i = 0; i < str.length / 2; i++) {
+
+                if (str[i] !== str[str.length - 1 - i]) {
+                    return 'String is not a palindrome';
+                }
+            }
+            return 'String is a palindrome';
+        }
+        document.write("Input string: " + inputString + "<br>" + isPalindrome(inputString));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write three functions that compute the sum of the numbers in a list: 
+        using a for-loop, a while-loop and recursion. 
+        (Subject to availability of these constructs in your language of choice.) -->
+    <script type="text/javascript">
+        var inputArray = [];
+        var size = window.prompt("Enter size of a list");
+
+        for (var i = 0; i < size; i++) {
+
+            inputArray[i] = parseInt(window.prompt('Enter Element ' + (i + 1)));
+        }
+
+        function arrayTotalUsingFor(arr) {
+            var total = 0;
+            for (var i = 0; i < arr.length; i++) {
+                total += arr[i];
+            }
+            return total;
+        }
+
+        function arrayTotalUsingWhile(arr) {
+            var total = 0;
+            var counter = 0
+            while (counter < arr.length) {
+                total += arr[counter];
+                counter += 1;
+            }
+            return total;
+        }
+
+        const arrayTotalUsingRecursion = function (arr) {
+            return (arr.length === 0) ? 0 : arr[0] + arrayTotalUsingRecursion(arr.slice(1));
+        }
+
+        document.write("Input list: " + inputArray + "<br>" + "Total of list using for loop: " + arrayTotalUsingFor(inputArray) + "<br>");
+        document.write("Input list: " + inputArray + "<br>" + "Total of list using while loop: " + arrayTotalUsingWhile(inputArray) + "<br>");
+        document.write("Input list: " + inputArray + "<br>" + "Total of list using recursion: " + arrayTotalUsingRecursion(inputArray) + "<br>");
+
+    </script>
+</body>
+
+</html>

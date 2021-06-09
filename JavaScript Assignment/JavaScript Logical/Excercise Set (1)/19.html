@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write a function that concatenates two lists. 
+        [a,b,c], [1,2,3] [a,b,c,1,2,3] -->
+
+    <script type="text/javascript">
+        function concatenatesLists(arr1, arr2) {
+            let primes = arr1.concat(arr2);
+            return primes;
+        }
+
+        var n1 = window.prompt("Enter a length of 1st list: ");
+        var n2 = window.prompt("Enter a length of 2nd list: ");
+        var arr1 = [], arr2 = [];
+
+        for (var i = 0; i < n1; i++) {
+            arr1[i] = prompt('Enter Element ' + (i + 1));
+        }
+
+        for (var i = 0; i < n2; i++) {
+            arr2[i] = prompt('Enter Element ' + (i + 1));
+        }
+
+        document.write(concatenatesLists(arr1, arr2));
+    </script>
+</body>
+
+</html>

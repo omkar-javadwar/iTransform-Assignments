@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Implement binary search. -->
+    <script type="text/javascript">
+        var iterativeFunction = function (arr, x) {
+
+            var start = 0, end = arr.length - 1;
+
+            // Iterate while start not meets end
+            while (start <= end) {
+
+                // Find the mid index
+                let mid = Math.floor((start + end) / 2);
+
+                // If element is present at mid, return True
+                if (arr[mid] == x) return "Element found!";
+
+                // Else look in left or right half accordingly
+                else if (arr[mid] < x)
+                    start = mid + 1;
+                else
+                    end = mid - 1;
+            }
+
+            return "Element not found!";
+        }
+
+        var n = window.prompt("Enter a length of list: ");
+        var inputArray = [];
+        var ele = window.prompt("Enter element to be searched:");
+
+        for (var i = 0; i < n; i++) {
+            inputArray[i] = parseInt(prompt('Enter Element ' + (i + 1)));
+        }
+
+        document.write("Input array: " + inputArray + "<br>" + iterativeFunction(inputArray, ele) + "<br>");
+
+    </script>
+</body>
+
+</html>

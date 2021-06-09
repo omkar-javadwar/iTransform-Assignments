@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<title>Generate * Patteren</title>
+
+<body>
+    <script>
+        var count = 0;
+        var arr = [];
+        var n = window.prompt("Enter a value between 1 to 30: ");
+        if (n > 0 && n < 31) {
+            for (var i = 0; i < 3; i++) {
+                let n = prompt("enter n");
+                document.write("*".repeat(n) + "<br>");
+            }
+        }
+        else {
+            document.write("Enter valid input!");
+        }
+    </script>
+</body>
+
+</html>

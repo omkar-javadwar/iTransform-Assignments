@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Implement the following sorting algorithms: Selection sort, Insertion sort, Merge sort, Quick sort, Stooge Sort.
+        Check Wikipedia for descriptions.
+    -->
+    <script type="text/javascript">
+        //selection sort
+        function selectionSort(arr) {
+            var minIdx, temp,
+                len = arr.length;
+            for (var i = 0; i < len; i++) {
+                minIdx = i;
+                for (var j = i + 1; j < len; j++) {
+                    if (arr[j] < arr[minIdx]) {
+                        minIdx = j;
+                    }
+                }
+                temp = arr[i];
+                arr[i] = arr[minIdx];
+                arr[minIdx] = temp;
+            }
+            return arr;
+        }
+
+        //insertion sort
+        function insertionSort(arr) {
+            var i, len = arr.length, el, j;
+
+            for (i = 1; i < len; i++) {
+                el = arr[i];
+                j = i;
+
+                while (j > 0 && arr[j - 1] > toInsert) {
+                    arr[j] = arr[j - 1];
+                    j--;
+                }
+
+                arr[j] = el;
+            }
+
+            return arr;
+        }
+
+        //merge sort
+        function mergeSort(arr) {
+            var len = arr.length;
+            if (len < 2)
+                return arr;
+            var mid = Math.floor(len / 2),
+                left = arr.slice(0, mid),
+                right = arr.slice(mid);
+            //send left and right to the mergeSort to broke it down into pieces
+            //then merge those
+            return merge(mergeSort(left), mergeSort(right));
+        }
+
+        function merge(left, right) {
+            var result = [],
+                lLen = left.length,
+                rLen = right.length,
+                l = 0,
+                r = 0;
+            while (l < lLen && r < rLen) {
+                if (left[l] < right[r]) {
+                    result.push(left[l++]);
+                }
+                else {
+                    result.push(right[r++]);
+                }
+            }
+            //remaining part needs to be addred to the result
+            return result.concat(left.slice(l)).concat(right.slice(r));
+        }
+
+        //quick sort
+        function quickSort(arr, left, right) {
+            var len = arr.length,
+                pivot,
+                partitionIndex;
+
+
+            if (left < right) {
+                pivot = right;
+                partitionIndex = partition(arr, pivot, left, right);
+
+                //sort left and right
+                quickSort(arr, left, partitionIndex - 1);
+                quickSort(arr, partitionIndex + 1, right);
+            }
+            return arr;
+        }
+
+        function partition(arr, pivot, left, right) {
+            var pivotValue = arr[pivot],
+                partitionIndex = left;
+
+            for (var i = left; i < right; i++) {
+                if (arr[i] < pivotValue) {
+                    swap(arr, i, partitionIndex);
+                    partitionIndex++;
+                }
+            }
+            swap(arr, right, partitionIndex);
+            return partitionIndex;
+        }
+
+        function swap(arr, i, j) {
+            var temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+        //stooge sort
+        function stoogeSort(items) {
+            var array = [];
+
+            if (items) {
+                array = items.map(function (item) { return item; });
+            }
+
+            performStoogeSort(array, 0, array.length - 1);
+
+            return array;
+        }
+
+        function performStoogeSort(array, low, high) {
+            var t;
+
+            if (array[low] > array[high]) {
+                swap(array, low, high);
+            }
+
+            if ((high - low + 1) > 2) {
+                t = Math.floor((high - low + 1) / 3);
+                performStoogeSort(array, low, high - t);
+                performStoogeSort(array, low + t, high);
+                performStoogeSort(array, low, high - t);
+            }
+        }
+
+        var n = window.prompt("Enter a length of list: ");
+        var inputArray = [];
+
+        for (var i = 0; i < n; i++) {
+            inputArray[i] = parseInt(prompt('Enter Element ' + (i + 1)));
+        }
+
+        document.write("Selection sort: <br>" + "Input array: " + inputArray + "<br> Array after sorting:" + selectionSort(inputArray) + "<br>");
+        document.write("Insertion sort: <br>" + "Input array: " + inputArray + "<br> Array after sorting:" + insertionSort(inputArray) + "<br>");
+        document.write("Merge sort: <br>" + "Input array: " + inputArray + "<br> Array after sorting:" + mergeSort(inputArray) + "<br>");
+        document.write("Quick sort: <br>" + "Input array: " + inputArray + "<br> Array after sorting:" + quickSort(inputArray, 1, 2) + "<br>");
+        document.write("Stooge sort: <br>" + "Input array: " + inputArray + "<br> Array after sorting:" + stoogeSort(inputArray) + "<br>");
+    </script>
+</body>
+
+</html>

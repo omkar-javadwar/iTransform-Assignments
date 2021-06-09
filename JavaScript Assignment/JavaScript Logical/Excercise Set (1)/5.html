@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Modify the previous program such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17. -->
+    <script type="text/javascript">
+        var n = window.prompt("Enter a number: ");
+        var sum = 0;
+        for (var i = 1; i <= n; i++) {
+            if (i % 3 == 0 || i % 5 == 0) {
+                sum += i;
+            }
+        }
+        document.write(sum);
+    </script>
+</body>
+
+</html>

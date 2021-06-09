@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title>Temperature Converter - Fahrenheit to Celcius</title>
+
+<body>
+
+    <label for="fahrenheit">Fahrenheit:</label>
+    <input type="number" id="fahrenheit"><br>
+    <label for="celsius">Celcius:</label>
+    <input type="number" id="celsius"><br>
+
+    <button type="button" id="convert" onclick="convertTemp()">Convert</button>
+    <script>
+        function convertTemp() {
+            // Set the initial variables for c (Celsius) and f (Fahrenheit)
+            var c = document.getElementById('celsius'), f = document.getElementById('fahrenheit');
+            // Test if there is a value for Fahrenheit
+            if (f.value != '') {
+                // Set the value for Fahrenheit
+                c.value = Math.round((f.value - 32) * 5 / 9);
+                // Clear the value for Celsius
+                f.value = '';
+                // If there isn't a value for Fahrenheit
+            } else {
+                // Set the value for Fahrenheit
+                f.value = Math.round(c.value * 9 / 5 + 32);
+                // Clear the value for Celsius
+                c.value = '';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

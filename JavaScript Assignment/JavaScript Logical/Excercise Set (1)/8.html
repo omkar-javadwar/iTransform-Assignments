@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write a program that prints all prime numbers. (Note: if your programming language does not support arbitrary size numbers, printing all primes up to the largest number you can easily represent is fine too.) -->
+    <script type="text/javascript">
+        var store = [], i, j, primes = [];
+        for (i = 2; i < Number.MAX_SAFE_INTEGER; ++i) {
+            if (!store[i]) {
+                primes.push(i);
+                for (j = i << 1; j < Number.MAX_SAFE_INTEGER; j += i) {
+                    store[j] = true;
+                }
+            }
+        }
+        console.log(primes);
+    </script>
+</body>
+
+</html>

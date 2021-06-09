@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write a function that returns the elements on odd positions in a list. -->
+    <script type="text/javascript">
+        var inputArray = [];
+        var size = window.prompt("Enter size of a list");
+
+        for (var i = 0; i < size; i++) {
+
+            inputArray[i] = prompt('Enter Element ' + (i + 1));
+        }
+
+        function oddPositionElementsInArray(arr) {
+            var oddIndex = [];
+            for (var i = 0; i < arr.length; i += 2) {
+                oddIndex.push(arr[i]);
+            }
+            return oddIndex;
+        }
+
+        document.write("Input list: " + inputArray + "<br>" + "Odd position elements in the list are: " + oddPositionElementsInArray(inputArray));
+    </script>
+</body>
+
+</html>

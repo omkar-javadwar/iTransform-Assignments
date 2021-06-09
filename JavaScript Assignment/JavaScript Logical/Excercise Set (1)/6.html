@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1.... .n. -->
+    <script type="text/javascript">
+        var n = window.prompt("Enter a number: ");
+        var choice = window.prompt("Enter 1 for product until n or Enter 2 for sum until n: ");
+        var sum = 0, mul = 1;
+        for (var i = 1; i <= n; i++) {
+            sum += i;
+            mul *= i;
+        }
+        if (choice == 1)
+            document.write(sum);
+        else if (choice == 2)
+            document.write(mul);
+        else
+            document.write("Invalid Choice");
+    </script>
+</body>
+
+</html>

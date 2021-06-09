@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!--Write a function that merges two sorted lists into a new sorted list. 
+        [1,4,6],[2,3,5] ->  [1,2,3,4,5,6]. You can do this quicker than concatenating
+        them followed by a sort. -->
+    <script type="text/javascript">
+        function concatenatesListsWithSort(a, b) {
+            let primes = a.concat(b);
+            return primes.sort();
+        }
+
+        var n1 = window.prompt("Enter a length of 1st list: ");
+        var n2 = window.prompt("Enter a length of 2nd list: ");
+        var arr1 = [], arr2 = [];
+
+        for (var i = 0; i < n1; i++) {
+            arr1[i] = prompt('Enter Element ' + (i + 1));
+        }
+
+        for (var i = 0; i < n2; i++) {
+            arr2[i] = prompt('Enter Element ' + (i + 1));
+        }
+
+        document.write(concatenatesListsWithSort(arr1, arr2));
+    </script>
+</body>
+
+</html>

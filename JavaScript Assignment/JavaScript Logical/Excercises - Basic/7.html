@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercises: Basic</title>
+    <style>
+        div {
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Update the HTML page so that each time you reload it, you randomly see either a "Have a GOOD day!" or "Have a BAD day!" message. If you know some CSS already, make the font big. -->
+    <script type="text/javascript">
+        var value = ["Have a GOOD day!", "Have a BAD day!"];
+
+        var randomValue = value[Math.floor(Math.random() * value.length)];
+
+        document.write("<div>" + randomValue + "</div>");
+    </script>
+</body>
+
+</html>

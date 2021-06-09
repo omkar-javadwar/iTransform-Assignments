@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write a function that rotates a list by k elements. For example [1,2,3,4,5,6] rotated by two becomes
+        [3,4,5,6,1,2]. Try solving this without creating a copy of the list. How many swap or move operations do you
+        need?
+    -->
+    <script type="text/javascript">
+        function rotateArray(arr, k) {
+            if (!arr.length)
+                return arr;
+            let index = -1;
+            while (index++ < k) {
+                arr.unshift(arr.pop());
+            }
+            return arr;
+        }
+
+        var n = window.prompt("Enter the length of a list: ");
+        var k = window.prompt("Enter the value to rotate elements: ");
+
+        var inputArr = [];
+
+        for (var i = 0; i < n; i++) {
+            inputArr[i] = prompt('Enter Element ' + (i + 1));
+        }
+
+        document.write(rotateArray(inputArr, k));
+    </script>
+</body>
+
+</html>

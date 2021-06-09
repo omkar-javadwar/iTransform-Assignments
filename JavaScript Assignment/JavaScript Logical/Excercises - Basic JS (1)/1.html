@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercises: Basic JS</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*Create an array containing four random numbers. Use one-step array allocation. 
+        Print out the array by evaluating the array variable in Firebug.*/
+
+        var arrLen = 4;
+        var fourNums = [];
+        
+        while (fourNums.length < arrLen) {
+            fourNums.push(Math.random());
+        }
+
+        //fourNums = Array.from(Array(arrLen)).map(x=>Math.random());
+        document.write(fourNums);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write function that reverses a list, preferably in place. -->
+    <script type="text/javascript">
+        var inputArray = [];
+        var size = window.prompt("Enter size of a list");
+
+        for (var i = 0; i < size; i++) {
+
+            inputArray[i] = prompt('Enter Element ' + (i + 1));
+        }
+
+        function reverseArr(arr) {
+            var revArr = [];
+            for (var i = arr.length - 1; i >= 0; i--) {
+                revArr.push(arr[i]);
+            }
+            return revArr;
+        }
+
+        document.write("Actual list: " + inputArray +"<br>" +"Reversed list: " + reverseArr(inputArray));
+    </script>
+</body>
+
+</html>

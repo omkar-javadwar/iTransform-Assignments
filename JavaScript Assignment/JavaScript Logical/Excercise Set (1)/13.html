@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write a function that checks whether an element occurs in a list. -->
+    <script type="text/javascript">
+        var inputArray = [];
+        var size = window.prompt("Enter size of a list");
+
+        for (var i = 0; i < size; i++) {
+
+            inputArray[i] = prompt('Enter Element ' + (i + 1));
+        }
+
+        function checkElementInArray(arr) {
+            var element = window.prompt("Enter element to seach in array");
+            for (var i = 0; i < arr.length; i++) {
+                if (element == arr[i])
+                    return "Element is in the list";
+            }
+            return "Element is not found in the list";
+        }
+
+        document.write("Input list: " + inputArray + "<br>" + "Element is: " + checkElementInArray(inputArray));
+    </script>
+</body>
+
+</html>

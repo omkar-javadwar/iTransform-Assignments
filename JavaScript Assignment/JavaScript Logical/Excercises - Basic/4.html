@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercises: Basic</title>
+</head>
+
+<body>
+    <!-- Make a function that takes a number of flips and returns the fraction that were heads. -->
+    <script type="text/javascript">
+
+        function headsRatio(flip) {
+            return Math.floor(Math.random() * flip) / flip;
+        }
+
+        document.write("<br>" + headsRatio(10));
+        document.write("<br>" + headsRatio(10));
+        document.write("<br>" + headsRatio(10000));
+        document.write("<br>" + headsRatio(10000000));
+
+    </script>
+</body>
+
+</html>

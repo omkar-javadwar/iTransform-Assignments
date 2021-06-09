@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Modify the previous program such that only the users Alice and Bob are greeted with their names. -->
+    <script type="text/javascript">
+        var user = window.prompt("Enter your name: ");
+        user = user.toLowerCase();
+        if (user == "alice" || user == "bob") {
+            document.write("<h1>Welcome <nbps>" + user.charAt(0).toUpperCase() + user.slice(1) + "</h1>");
+        }
+        else {
+            document.write("<h1>" + user.charAt(0).toUpperCase() + user.slice(1) + "</h1>");
+        }
+    </script>
+</body>
+
+</html>

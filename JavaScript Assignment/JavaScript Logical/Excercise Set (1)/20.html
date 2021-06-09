@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write a function that combines two lists by alternatingly taking elements. 
+        e.g. [a,b,c], [1,2,3] [a,1,b,2,c,3].
+    -->
+
+    <script type="text/javascript">
+        function concatenatesLists(a, b) {
+            let l = a.length + b.length;
+            let c = [];
+            let j = 0, k = 0;
+            for (let i = 0; i < l; i++) {
+                if (i % 2 == 0) {
+                    c[i] = a[j++];
+                } else {
+                    c[i] = b[k++];
+                }
+            }
+            return c;
+        }
+
+        var n1 = window.prompt("Enter a length of 1st list: ");
+        var n2 = window.prompt("Enter a length of 2nd list: ");
+        var arr1 = [], arr2 = [];
+
+        for (var i = 0; i < n1; i++) {
+            arr1[i] = prompt('Enter Element ' + (i + 1));
+        }
+
+        for (var i = 0; i < n2; i++) {
+            arr2[i] = prompt('Enter Element ' + (i + 1));
+        }
+
+        document.write(concatenatesLists(arr1, arr2));
+    </script>
+</body>
+
+</html>

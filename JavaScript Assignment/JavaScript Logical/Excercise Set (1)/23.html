@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write a function that computes the list of the first 100 Fibonacci numbers. The first two Fibonacci numbers are 1
+        and 1. The n+1-st Fibonacci number can be computed by adding the n-th and the n-1-th Fibonacci number. The first
+        few are therefore 1, 1, 1+1=2, 1+2-3, 2+3=5, 3+5=8.
+    -->
+    <script type="text/javascript">
+        var num = window.prompt("Enter value of n");
+        function fibonacciSeries(n) {
+            let f1 = 1, f2 = 1, i;
+            if (n <= 1)
+                return n;
+
+            document.write(f1 + " ");
+
+            for (i = 1; i < n; i++) {
+                document.write(f2 + " ");
+                let next = f1 + f2;
+                f1 = f2;
+                f2 = next;
+            }
+        }
+        document.write(fibonacciSeries(num));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write functions that add, subtract, and multiply two numbers in their digit list representation (and return a new
+        digit list). If you're ambitious you can implement Karatsuba multiplication. Try different bases. What is the
+        best base if you care about speed? If you couldn't completely solve the prime number exercise above due to the
+        lack of large numbers in your language, you can now use your own library for this task.
+    -->
+    <script type="text/javascript">
+        var n1 = window.prompt("Enter a length of 1st list: ");
+        var n2 = window.prompt("Enter a length of 2nd list: ");
+        var arr1 = [], arr2 = [];
+
+        for (var i = 0; i < n1; i++) {
+            arr1[i] = parseInt(prompt('Enter Element ' + (i + 1)));
+        }
+
+        for (var i = 0; i < n2; i++) {
+            arr2[i] = parseInt(prompt('Enter Element ' + (i + 1)));
+        }
+
+        function addLists(a, b) {
+            var c = [];
+            var sum = 0;
+            for (var i = 0; i < Math.max(a.length, b.length); i++) {
+                sum = a[i] + b[i];
+                c.push(sum);
+            }
+            return c;
+        }
+
+        function subLists(a, b) {
+            var c = [];
+            var sub = 0;
+            for (var i = 0; i < Math.max(a.length, b.length); i++) {
+                sub = a[i] - b[i];
+                c.push(sub);
+            }
+            return c;
+        }
+
+        function mulLists(a, b) {
+            var c = [];
+            var mul = 0;
+            for (var i = 0; i < Math.max(a.length, b.length); i++) {
+                mul = a[i] * b[i];
+                c.push(mul);
+            }
+            return c;
+        }
+
+        document.write(addLists(arr1, arr2) + "<br>");
+        document.write(subLists(arr1, arr2) + "<br>");
+        document.write(mulLists(arr1, arr2) + "<br>");
+    </script>
+</body>
+
+</html>

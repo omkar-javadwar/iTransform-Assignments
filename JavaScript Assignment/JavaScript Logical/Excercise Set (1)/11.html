@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write function that reverses a list, preferably in place. -->
+    <script type="text/javascript">
+        var inputArray = [];
+        var size = window.prompt("Enter size of a list");
+
+        for (var i = 0; i < size; i++) {
+
+            inputArray[i] = prompt('Enter Element ' + (i + 1));
+        }
+
+        function maxArray(arr) {
+            var maxValue = -Infinity;
+            for (item of arr) {
+                if (item > maxValue)
+                    maxValue = item;
+            }
+            return maxValue;
+           // return Math.max.apply(null, arr);
+        }
+
+        document.write("Largest element from " + inputArray + " is: " + maxArray(inputArray));
+    </script>
+</body>
+
+</html>
