@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercise Set - 1</title>
+</head>
+
+<body>
+    <!-- Write a guessing game where the user has to guess a secret number. After every guess the program tells the user
+        whether their number was too large or too small. At the end the number of tries needed should be printed. It
+        counts only as one try if they input the same number multiple times consecutively. -->
+    <script type="text/javascript">
+        var secretNumber, guess;
+
+        secretNumber = Math.floor(Math.random() * 10);
+        guess = window.prompt("Enter a number: ");
+        if (guess) {
+            if (guess == secretNumber) {
+                document.write("Your guess is correct. Congratulations!");
+            }
+            else if (guess < secretNumber) {
+                document.write("Your guess is smaller than the secret number.");
+            }
+            else if (guess > secretNumber) {
+                document.write("Your guess is greater than the secret number.");
+            }
+        }
+        else{
+            document.write("Please enter a valid number...");
+        }
+    </script>
+</body>
+
+</html>
