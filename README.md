@@ -10,6 +10,7 @@ iTransform Assignments Solutions.
    ├── HTML and CSS Assignment
    ├── JavaScript Assignment
    ├── ES and TypeScript Assignments
-   └── NodeJS and Express Assignment
+   ├── NodeJS and Express Assignment
+   └── REST API Assignment
 ```   
 
