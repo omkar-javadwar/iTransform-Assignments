@@ -1,4 +1,4 @@
-import java.util .*;
+import java.util.*;
 class SimpleCompoundInterest
 {
     public static void main (String argu[ ])
