@@ -22,3 +22,8 @@ public class Main {
 
 	}
 }
+
+/* Output:
+error: cannot inherit from final Singletone
+class A extends Singletone
+*/
