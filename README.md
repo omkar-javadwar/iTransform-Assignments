@@ -11,7 +11,7 @@ iTransform Assignments Solutions.
    ├── JavaScript Assignment
    ├── ES and TypeScript Assignments
    ├── NodeJS and Express Assignment
-   ├── Core Java Assignment - 1
+   ├── Core Java Assignments
    └── REST API Assignment
 ```   
 
