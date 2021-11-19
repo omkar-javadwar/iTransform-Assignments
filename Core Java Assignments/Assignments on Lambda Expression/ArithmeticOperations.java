@@ -6,7 +6,7 @@ interface Operations
     int op(int x, int y);
 }
 
-public class ArithmeticOp {
+public class ArithmeticOperations {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter first number:");
